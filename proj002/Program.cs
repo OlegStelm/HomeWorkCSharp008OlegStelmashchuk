@@ -12,8 +12,8 @@ int m, n;
 Console.WriteLine("Enter the m dimension of the array: ");
 int.TryParse(Console.ReadLine()!, out m);
 Console.WriteLine("Enter the n dimension of the array: ");
-Console.WriteLine();
 int.TryParse(Console.ReadLine()!, out n);
+Console.WriteLine();
 int[,] array = new int[m, n];
 for (int i = 0; i < array.GetLength(0); i++)
 {
@@ -37,14 +37,14 @@ for (int i = 0, s = 0; i < array.GetLength(0); i++, s++)
     Console.Write($"{array2[s]}  ");
 }
 Console.WriteLine();
-int minIndex = 1;
+int minIndex = 0;
 int min = array2[0];
 for (int s = 0; s < array2.Length; s++)
 {
     if (array2[s] < min)
     {
         min = array2[s];
-        minIndex = s + 1;
+        minIndex = s;
     }
 }
 Console.WriteLine();
